@@ -1,0 +1,22 @@
+{
+  "name": "3rd-grade-chinese-vocabulary",
+  "version": "5.2.0",
+  "description": "三年级语文完整学习系统 - 集成 Notion 数据库",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "keywords": ["chinese", "vocabulary", "learning", "notion"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三年级语文完整学习系统 v5.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 三年级语文完整学习系统</h1>
+            <p class="version">v5.2</p>
+        </header>
+
+        <div class="status-bar">
+            <div class="status-item">
+                <span class="label">今日学习:</span>
+                <span id="todayCount" class="value">0</span>
+            </div>
+            <div class="status-item">
+                <span class="label">总词汇量:</span>
+                <span id="totalWords" class="value">0</span>
+            </div>
+            <div class="status-item">
+                <span class="label">掌握程度:</span>
+                <span id="masterRate" class="value">0%</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="learning-section">
+                <h2>📖 学习区</h2>
+                <div id="wordCard" class="word-card">
+                    <div class="card-content">
+                        <div class="word-display">
+                            <h3 id="currentWord" class="chinese-word">点击"开始学习"</h3>
+                            <div id="pinyin" class="pinyin"></div>
+                        </div>
+                        <div id="meaning" class="meaning"></div>
+                        <div id="example" class="example"></div>
+                    </div>
+                </div>
+
+                <div class="control-buttons">
+                    <button id="startBtn" class="btn btn-primary">开始学习</button>
+                    <button id="knowBtn" class="btn btn-success" style="display:none;">认识 ✓</button>
+                    <button id="dontKnowBtn" class="btn btn-warning" style="display:none;">不认识 ×</button>
+                    <button id="nextBtn" class="btn btn-secondary" style="display:none;">下一个 →</button>
+                </div>
+            </div>
+
+            <div class="records-section">
+                <h2>📝 学习记录</h2>
+                <div id="recordsList" class="records-list">
+                    <p class="empty-message">暂无学习记录</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <h3>学习进度</h3>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <p id="progressText" class="progress-text">0 / 0</p>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+    <div id="loading" class="loading" style="display:none;">
+        <div class="spinner"></div>
+        <p>加载中...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
